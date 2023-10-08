@@ -8,6 +8,8 @@ import CreateVP from "./components/CreateVP";
 import SignVP from "./components/SignVP";
 import { ethers } from 'ethers';
 
+import DisplayProducts from "./components/DisplayProducts/DisplayProducts";
+import SendLocation from "./components/SendLocation/SendLocation";
 // import DIDRegistryContract from "./components/Contract/Contract";
 import DIDRegistry from './components/Contract/DIDRegistry.json';
 const contractAddress = "0xee514cd1FD1cdAEC4fC17b3e252457d6BE5C2114";
@@ -95,9 +97,12 @@ useEffect(() => {
             <br></br>
             <span className="gradient-text-1">J.P. Morgan Hackathon</span>
           </h1>
+          <SendLocation />
+          <DisplayProducts />
+          
 
           <p className="description">
-            Raise charitable funds with your verified digital identity
+            B2B Solutions - Buy Now Pay Later
           </p>
           <p className="description">
             Issuer Contract Addresss: {issuer}

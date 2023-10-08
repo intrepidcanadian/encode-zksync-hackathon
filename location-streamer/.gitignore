@@ -1,0 +1,17 @@
+# Node.js specific
+node_modules/
+npm-debug.log
+
+# TypeScript build output
+**/*.tsbuildinfo
+**/dist/
+
+# IDEs and editors
+.vscode/
+*.code-workspace
+
+# OS specific
+.DS_Store
+Thumbs.db
+
+.env

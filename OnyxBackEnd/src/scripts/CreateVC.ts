@@ -44,16 +44,13 @@ import {
     console.log('Issuer DID:', issuerDidWithKeys.did)
   
     const holderDidWithKeys = await didEthr.generateFromPrivateKey(
-      // privateKeyBufferFromString(HOLDER_EDDSA_PRIVATE_KEY)
       (HOLDER_ES256K_PRIVATE_KEY)
     );
 
-     // looks like it generates a holder DID from private key
     console.log('Holder DID:', holderDidWithKeys)
     console.log('Holder DID:', holderDidWithKeys.did)
 
 
-    // looks like it creates a DID for the VC
     const vcDidKey = (await didEthr.create()).did;
   
     const credentialType = "PROOF_OF_ADDRESS";

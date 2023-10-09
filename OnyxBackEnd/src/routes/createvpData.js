@@ -11,7 +11,7 @@ router.get('/', (req, res) => {
         return res.status(500).send('Failed to run script.');
       }
       console.log(stdout);
-      const filePath = path.join(__dirname,"./../verifiable_presentation/proofOfAddress.json");
+      const filePath = path.join(__dirname,"./../verifiable_presentation/proofOfBol.json");
       
       fs.readFile(filePath, 'utf8', (err, data) => {
         if (err) {

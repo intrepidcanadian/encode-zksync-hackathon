@@ -1,0 +1,28 @@
+{
+  "@context": [
+    "https://www.w3.org/2018/credentials/v1"
+  ],
+  "credentialSubject": {
+    "id": "did:ethr:zkSync Era Testnet:0x02c09cDDEB0c8E902750e545c42E26592f469Fce",
+    "Shipper": "Mersk",
+    "Carrier": "Tony",
+    "Consignee": "Elaine",
+    "Product": "Herbs",
+    "Quantity": "10",
+    "Weight": "40"
+  },
+  "issuer": {
+    "id": "did:ethr:zkSync Era Testnet:0xe32B3C476b95eA192D444Cfb2e2b80559332f8A2"
+  },
+  "type": [
+    "VerifiableCredential",
+    "PROOF_OF_BOL"
+  ],
+  "issuanceDate": "2023-10-09T03:36:18.000Z",
+  "credentialSchema": {
+    "id": "https://raw.githubusercontent.com/intrepidcanadian/sdk-schema/main/billofladen.json",
+    "type": "JsonSchemaValidator2018"
+  },
+  "id": "did:ethr:zkSync Era Testnet:0x25BBaeE7E7EF858D51744c71821d8f9A6ba61C20",
+  "expirationDate": "2024-10-09T03:36:18.496Z"
+}

@@ -15,12 +15,17 @@ const signvcDataRoute = require('./src/routes/signvcData');
 
 const createVPDataRoute = require('./src/routes/createVPData');
 const signVPDataRoute = require('./src/routes/signVPData');
+const claimRoute = require('./src/routes/claimData');
+const verifyHolderRoute = require('./src/routes/verifyHolderData');
 
 app.use('/post-data', postvcDataRoute);
 app.use('/get-data', getvcDataRoute);
 app.use('/sign-vcdata', signvcDataRoute);
 app.use('/create-vpdata', createVPDataRoute);
 app.use('/sign-vpdata', signVPDataRoute);
+app.use('/public/issue', claimRoute);
+app.use('/verify', verifyHolderRoute);
+
 
 
 app.listen(PORT, () => {

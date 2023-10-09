@@ -1,0 +1,9 @@
+{
+    "token": "Iz00GJPR8@az",
+    "issuer": "http://localhost:3001",
+    "web3": {
+        "web3HttpProvider": "https://testnet.era.zksync.dev",
+        "didRegistryAddress": "0x0146c6569aa2a45b29067DaE88caCCaeCc1552B4",
+        "name": "zkSync Era Testnet"
+    }
+}

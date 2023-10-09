@@ -1,4 +1,7 @@
 import React, { useState } from 'react';
+import "./../styles/Home.css";
+import vcImage from "./../images/BillofLaden.png";
+import CreateContract from "./CreateContract/CreateContract";
 
 function CreateVC() {
 
@@ -9,12 +12,12 @@ function CreateVC() {
   const [vcMessage, setvcMessage] = useState(null);
 
   const [vcData, setVCData] = useState({
-    name: '',
-    address: '',
-    city: '',
-    state: '',
-    country: '',
-    zip: '',
+    Shipper: '',
+    Carrier: '',
+    Consignee: '',
+    Product: '',
+    Quantity: '',
+    Weight: '',
   });
 
   const handlevcInputChange = (event) => {
@@ -59,64 +62,64 @@ function CreateVC() {
 
   return (
 
-    <div className="App">
+    <div className="Form">
 
       <form>
-      <label htmlFor="name">Name:</label>
+      <label htmlFor="shipper">Shipper:</label>
         <input
           type="text"
-          id="name"
-          name="name"
-          value={vcData.name}
+          id="Shipper"
+          name="Shipper"
+          value={vcData.Shipper}
           onChange={handlevcInputChange}
           required
         /><br /><br />
-          <label htmlFor="address">Address:</label>
+      <label htmlFor="carrier">Carrier:</label>
         <input
           type="text"
-          id="address"
-          name="address"
-          value={vcData.address}
-          onChange={handlevcInputChange}
-          required
-        /><br /><br />
-
-        <label htmlFor="city">City:</label>
-        <input
-          type="text"
-          id="city"
-          name="city"
-          value={vcData.city}
+          id="Carrier"
+          name="Carrier"
+          value={vcData.Carrier}
           onChange={handlevcInputChange}
           required
         /><br /><br />
 
-        <label htmlFor="state">State:</label>
+        <label htmlFor="consignee">Consignee:</label>
         <input
           type="text"
-          id="state"
-          name="state"
-          value={vcData.state}
+          id="Consignee"
+          name="Consignee"
+          value={vcData.Consignee}
           onChange={handlevcInputChange}
           required
         /><br /><br />
 
-        <label htmlFor="country">Country:</label>
+        <label htmlFor="product">Product:</label>
         <input
           type="text"
-          id="country"
-          name="country"
-          value={vcData.country}
+          id="Product"
+          name="Product"
+          value={vcData.Product}
           onChange={handlevcInputChange}
           required
         /><br /><br />
 
-        <label htmlFor="zip">Zip Code:</label>
+        <label htmlFor="quantity">Quantity - Packages:</label>
         <input
           type="text"
-          id="zip"
-          name="zip"
-          value={vcData.zip}
+          id="Quantity"
+          name="Quantity"
+          value={vcData.Quantity}
+          onChange={handlevcInputChange}
+          required
+        /><br /><br />
+
+        <label htmlFor="weight">Weight - Pounds:</label>
+        <input
+          type="text"
+          id="Weight"
+          name="Weight"
+          value={vcData.Weight}
           onChange={handlevcInputChange}
           required
         /><br /><br />
@@ -125,9 +128,29 @@ function CreateVC() {
         <button onClick={handleButtonClick}>Create a Verfiable Credential</button>
       </form>
 
+      {vcMessage && (
+    <div className="vc__card">
+        <img src={vcImage} alt="VC Image" className="card-image" />
+        <div className="vc__card-overlay">
+            <div className = "vc__credentials">
+                <strong>Shipper DID:</strong> {vcMessage.credentialSubject.id}<br />
+                <strong>Issuer DID:</strong> {vcMessage.issuer.id}<br />
+                <strong>Issuance Date:</strong> {vcMessage.issuanceDate}<br />
+                <strong>Document DID:</strong> {vcMessage.id}
+            </div>
+            <div>
+                <strong>Shipper:</strong> {vcMessage.credentialSubject.Shipper}<br />
+                <strong>Carrier:</strong> {vcMessage.credentialSubject.Carrier}<br />
+                <strong>Consignee:</strong> {vcMessage.credentialSubject.Consignee}<br />
+                <strong>Product:</strong> {vcMessage.credentialSubject.Product}<br />
+                <strong>Quantity:</strong> {vcMessage.credentialSubject.Quantity}<br />
+                <strong>Weight:</strong> {vcMessage.credentialSubject.Weight}
+            </div>
+        </div>
+    </div>
+)}
 
-      {responseMessage && <pre>{JSON.stringify(responseMessage, null, 2)}</pre>}
-      {vcMessage && <pre>{JSON.stringify(vcMessage, null, 2)}</pre>}
+      <CreateContract />
 
     </div>
   );

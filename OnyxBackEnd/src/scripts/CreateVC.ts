@@ -53,7 +53,8 @@ import {
 
     const vcDidKey = (await didEthr.create()).did;
   
-    const credentialType = "PROOF_OF_ADDRESS";
+    // const credentialType = "PROOF_OF_ADDRESS";
+    const credentialType = "PROOF_OF_BOL";
   
     const subjectData = userData;
 

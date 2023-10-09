@@ -23,7 +23,7 @@ export default async function (hre: HardhatRuntimeEnvironment) {
 
   // Create deployer object and load the artifact of the contract you want to deploy.
   const deployer = new Deployer(hre, wallet);
-  const artifact = await deployer.loadArtifact("DIDRegistry");
+  const artifact = await deployer.loadArtifact("EthereumDIDRegistry");
 
   const DIDRegistry = await deployer.deploy(artifact);
 
@@ -34,7 +34,7 @@ export default async function (hre: HardhatRuntimeEnvironment) {
   // verify contract for tesnet & mainnet
   if (process.env.NODE_ENV != "test") {
     // Contract MUST be fully qualified name (e.g. path/sourceName:contractName)
-    const contractFullyQualifedName = "contracts/DIDRegistry.sol:DIDRegistry";
+    const contractFullyQualifedName = "contracts/EthereumDIDRegistry.sol:EthereumDIDRegistry";
 
     // Verify contract programmatically
     const verificationId = await hre.run("verify:verify", {

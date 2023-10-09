@@ -1,8 +1,8 @@
 {
-  "name": "tony",
-  "address": "sdf",
-  "city": "tst",
-  "state": "tstt",
-  "country": "Canada",
-  "zip": "1231"
+  "Shipper": "Mersk",
+  "Carrier": "Tony",
+  "Consignee": "Elaine",
+  "Product": "Herbs",
+  "Quantity": "10",
+  "Weight": "40"
 }

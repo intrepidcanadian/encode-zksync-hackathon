@@ -26,6 +26,14 @@ function SignVP() {
     }
 
 
+    const contentStyle = {
+      maxHeight: '300px', 
+      overflowY: 'auto',
+      overflowX: 'auto',
+      whiteSpace: 'pre-wrap', 
+      border: '1px solid #ccc',  
+      padding: '10px'
+    };
 
 
   return (
@@ -33,7 +41,7 @@ function SignVP() {
      
       <button onClick={signButtonClick}>Sign Verifiable Presentation With Wallet Signature</button>
 
-      {signedVP && <pre>{JSON.stringify(signedVP, null, 2)}</pre>}
+      {signedVP && <pre style = {contentStyle}>{JSON.stringify(signedVP, null, 2)}</pre>}
     </div>
   );
 }

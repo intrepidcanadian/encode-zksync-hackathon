@@ -25,7 +25,14 @@ function SignVC() {
 
     }
 
-
+    const contentStyle = {
+      maxHeight: '300px', 
+      overflowY: 'auto',
+      overflowX: 'auto',
+      whiteSpace: 'pre-wrap', 
+      border: '1px solid #ccc',  
+      padding: '10px'
+    };
 
 
   return (
@@ -33,7 +40,7 @@ function SignVC() {
      
       <button onClick={signButtonClick}>Sign Verifiable Credentials With Wallet Signature</button>
 
-      {signedVc && <pre>{JSON.stringify(signedVc, null, 2)}</pre>}
+      {signedVc && <pre style = {contentStyle}>{JSON.stringify(signedVc, null, 2)}</pre>}
     </div>
   );
 }

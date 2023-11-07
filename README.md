@@ -10,13 +10,7 @@ https://www.loom.com/share/4b7992292e4b4b78b17acb4ab350ffb8?sid=0a0a25f5-1810-45
 
 *****
 
-Demo Video
-
-https://www.loom.com/share/30732bb6b7704c2bbb16107d6e493c06?sid=4913ac52-829c-4d19-a546-7096e36cb0f4
-
-Demo Presentation
-
-https://www.canva.com/design/DAFwt7EBgVc/3FqYbhiuYtZbavR5BtdHzw/edit?utm_content=DAFwt7EBgVc&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+Refer to this github for final code: https://github.com/intrepidcanadian/encode-zksync-onyx-hackathon
 
 Summary
 

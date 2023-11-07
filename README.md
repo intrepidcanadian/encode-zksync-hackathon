@@ -10,8 +10,6 @@ https://www.loom.com/share/4b7992292e4b4b78b17acb4ab350ffb8?sid=0a0a25f5-1810-45
 
 *****
 
-Refer to this github for final code: https://github.com/intrepidcanadian/encode-zksync-onyx-hackathon
-
 Summary
 
 Digital Verification of Supply Chain to enhance transparency, reduce ineffiencies, and facilitate B2B cross-border trade. 
